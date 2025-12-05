@@ -1,6 +1,6 @@
 # Simple BitTorrent-style P2P Client
 
-This project is an implementation of a simple BitTorrent-style P2P client in Python. It includes a tracker, a peer client, and a utility to create torrent files. The system is designed to demonstrate core BitTorrent concepts like peer discovery, multi-peer communication, and parallel piece-based file transfers
+This project is an implementation of a simple BitTorrent-style P2P client in Python. It includes a tracker, a peer client, and a utility to create torrent files. The system is designed to demonstrate core BitTorrent concepts like peer discovery, multi-peer communication, and parallel piece-based file transfers.
 
 ## Project Structure
 
@@ -27,12 +27,12 @@ The project is built using only Python's standard libraries and the `requests` l
 Below are instructions for testing the program with three clients and is easily generalizable to any configuration of your choosing
 
 ### Step 1: Create the `.torrent` File
-Either find a file to share or generate one. This command creates a 10MB file named `test_video.mov`.
+Either find a file to share or generate one. This command creates a 10MB file named `test_video.mov`
 ```bash
 dd if=/dev/zero of=test_video.mov bs=1M count=10
 ```
 
-With that file, use the provided script to create a torrent file for it. This command generates the torrent file `test_video.mov.torrent`.
+With that file, use the provided script to create a torrent file for it. This command generates the torrent file `test_video.mov.torrent`
 ```bash
 python create_torrent.py test_video.mov http://127.0.0.1:8000/announce
 ```
@@ -50,7 +50,7 @@ Start the tracker with the torrent file it will manage.
 python tracker.py test_video.mov.torrent
 ```
 
-Open three additional terminals in the project's root directory for the clients.
+Open three additional terminals in the project's root directory for the clients, specifying unique ports for each of them
 ```bash
 cd peer1/
 python ../client.py ../test_video.mov.torrent 6881
@@ -66,7 +66,7 @@ cd peer3/
 python ../client.py ../test_video.mov.torrent 6883
 ```
 
-Watch as the file is transferred! Press `Ctrl+C` to stop any of the programs.
+Sit back and watch as the files transfer. Press `Ctrl+C` to stop any of the programs.
 
 ## Command-Line Options
 
