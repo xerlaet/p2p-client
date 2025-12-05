@@ -1,0 +1,20 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+*.swp
+*~
+.#*
+
+# OS specific files
+.DS_Store
+
+# Generated test files
+test_video.mov
+*.torrent
+
+# Peer-specific folders
+peer*/
